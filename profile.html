@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#profile {
+				background-color: #EEEEEE;
+				margin: 3% auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 30%;
+			}
+			.btn {
+				display: inline-block;
+				padding: 6px 12px;
+				margin-bottom: 0;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.42857143;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				background-image: none;
+				border: 1px solid transparent;
+				border-radius: 4px;
+				background: #0066FF;
+			}
+			.btn:hover{
+				background: blue;
+			}
+			.btn-link{
+				float: right;
+				text-align: right;
+				text-decoration: none;
+				background: none;
+			}
+			.btn-link:hover{
+				background: none;
+				text-decoration: underline;
+			}
+			label{
+				font-weight:bold;
+			}
+			.form-group {
+				margin-bottom: 15px;
+			}
+			.form-control {
+				display: block;
+				width: 90%;
+				height: 30px;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.42857143;
+				color: #555;
+				background-color: #fff;
+				background-image: none;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			.form-control:read-only{
+				background-color: #DDDDDD;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="profile">
+			<h1><font color=blue> Profile </font></h1>
+			<form name="form">
+				<div class="form-group">
+					<label for="username">Username</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="username" required="" type="text" ng-model="user.username" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="password" required="" type="text" ng-model="user.password" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group">
+					<label for="firstname">Firstname</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="firstname" required="" type="text" ng-model="user.firstname" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group">
+					<label for="lastname">Lastname</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="lastname" required="" type="text" ng-model="user.lastname" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="email" required="" type="text" ng-model="user.email" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="phone" required="" type="text" ng-model="user.phone" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group">
+					<label for="location">Location</label><br />
+					<input class="form-control ng-untouched ng-pristine ng-invalid" name="location" required="" type="text" ng-model="user.location" ng-readonly="readOnly" required>
+				</div>
+				<div class="form-group" style="color:red;font-size:80%">{{alert}}</div>
+				<div class="form-group">
+					<input type="submit" value="{{buttonValue}}" class="btn" ng-click="buttonClick()">
+					<input type="button" value="reset" class="btn" ng-click="resetClick()">
+					<a class="btn btn-link" href="#/home">Cancel</a>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

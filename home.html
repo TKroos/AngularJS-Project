@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			@keyframes example {
+				0%   {color:black; left:-100px; top:-100px;}
+				25%  {color:red; left:100px; top:-100px;}
+				50%  {color:blue; left:100px; top:100px;}
+				75%  {color:green; left:-100px; top:100px;}
+				100% {color:black; left:-100px; top:-100px;}
+			}
+			.divCls{
+				width: 60%
+				height: 100px;
+				margin: 15% auto;
+				text-align: center;
+				font-size: 380%;
+				position: relative;
+				color: black;
+				animation-name: example;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="divCls"> Welcome, {{user}} </div>
+	</body>
+</html>

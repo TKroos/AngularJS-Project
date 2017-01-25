@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<style>
+			.container {
+				background-color: #EEEEEE;
+				margin: 5% auto;
+				padding: 20px;
+				padding-bottom: 35px;
+				border: 1px solid #888;
+				width: 50%;
+			}
+			table{
+				width: 100%;
+			}
+			.btn {
+				display: inline-block;
+				padding: 6px 12px;
+				margin-bottom: 0;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.42857143;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				background-image: none;
+				border: 1px solid transparent;
+				border-radius: 4px;
+				background: #0066FF;
+			}
+			.btn:hover{
+				background: blue;
+			}
+			.btn-link{
+				text-decoration: none;
+				background: none;
+			}
+			.btn-link:hover{
+				background: none;
+				text-decoration: underline;
+			}
+			.btn-link2{
+				float: right;
+				text-align: right;
+				text-decoration: none;
+				background: none;
+			}
+			.btn-link2:hover{
+				background: none;
+				text-decoration: underline;
+			}
+			td{
+				text-align: center;
+				font-size: 80%;
+			}
+			.form-group {
+				margin-bottom: 15px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="form-group">
+				<table border="1">
+					<tr>
+						<th>index</th>
+						<th>sender</th>
+						<th>title</th>
+						<th>recipient</th>
+						<th>more..</th>
+					</tr>
+					<tbody ng-repeat="message in messages track by $index">
+						<tr>
+							<td><img ng-src="star.jpg" height="13" width="13" ng-show="{{message.important}}=='1'">{{$index + 1}}</td>
+							<td><img ng-src="{{message.sender_img}}" height="20" width="20"><font valign="middle">{{message.sender}}</font></td>
+							<td>{{message.title}}</td>
+							<td><img ng-src="{{message.recipient_img}}" height="20" width="20"><font valign="middle">{{message.recipient}}</font></td>
+							<td><a class="btn btn-link" href="#/message_detail/{{$index}}">More...</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="form-group">{{noMessage}}</div>
+			<div class="form-group">
+				<a class="btn btn-link2" href="#/home">Cancel</a>
+			</div>
+		</div>
+	</body>
+<html>

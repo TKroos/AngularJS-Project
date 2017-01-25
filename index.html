@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.5/angular-cookies.min.js"></script>
+		<script src="script.js"></script>
+		<style>
+			.logout {
+				text-align: right;
+				float: right;
+			}
+		</style>
+	</head>
+	<body data-ng-app="myApp">
+		<div ng-show="display">
+			<a href="#/home">Home</a> |
+			<a href="#/profile">Profile</a> |
+			<a href="#/message">Messages</a>
+			<div class="logout">
+				<a href="#/">Logout</a>
+			</div>
+		</div>
+		<div ng-view></div>
+	</body>
+</html>
